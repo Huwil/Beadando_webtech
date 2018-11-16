@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/addManufacturers.js"></script>
+
+<article>
+    <div id="content">
+        <form action="addManufacturers" method="post">
+            <table>
+                <tr>
+                    <td>Név</td>
+                    <td><input name="name" type="text" required="text"></td>
+                </tr>
+                <tr>
+                    <td>Ország</td>
+                    <td><select name="country">
+                        <option value="Hungary">Hungary</option>
+                        <option value="England">England</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Czech">Czech</option>
+                        <option value="USA">USA</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Alapítva</td>
+                    <td><input name="founded" type="date" required="date"></td>
+                 </tr>
+            </table>
+            <tr>
+                <td><input type="submit" value="Gyártó hozzáadása"></td>
+            </tr>
+        </form>
+    </div>
+</article>
