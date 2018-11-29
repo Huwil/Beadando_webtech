@@ -1,42 +1,57 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <script src="js/addCars.js"></script>
 
-<article>
-    <div id="content">
+<article id="cel">
+    <div>
         <form action="addCar" method="post">
-            <table>
+            <table class="table-orange">
                 <tr>
-                    <td>Név</td>
-                    <td><input name="name" type="text" required="text"></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Név</td>
+                                <td><input name="name" type="text" required="text"></td>
+                                <td>Fogyasztás</td>
+                                <td><input name="consumption" type="number" required="number" min="0"></td>
+                                <td>Évjárat</td>
+                                <td><input name="year" type="number" required="number" min="0" max="2018"></td>
+                            </tr>
+                            <tr>
+                                <td>Lóerő</td>
+                                <td><input name="horsepower" type="number" required="number" min="0"></td>
+                                <td>Elérhetőség</td>
+                                <td><input name="available" type="number" required="number" min="0"></td>
+                                <td>Szín</td>
+                                <td>
+                                    <select name="color">
+                                        <option value="red">Piros</option>
+                                        <option value="green">Zöld</option>
+                                        <option value="blue">Kék</option>
+                                        <option value="black">Fekete</option>
+                                        <option value="white">Fehér</option>
+                                        <option value="silver">Ezüst</option>
+                                        <option value="brown">Barna</option>
+                                        <option value="yellow">Sárga</option>
+                                        <option value="orange">Narancs</option>
+                                        <option value="gray">Szürke</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gyártó</td>
+                                <td><select id="ddl" name="manufacturer" type="text" required="text"></select></td>
+                            </tr>
+                            <tr>
+                                <td><input class="button" type="submit" value="Autó hozzáadása"></td>
+                                <td><input class="button" value="Autók listázása" onclick="loadCars()"></td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Fogyasztás</td>
-                    <td><input name="consumption" type="text" required="text"></td>
-                </tr>
-                <tr>
-                    <td>Szín</td>
-                    <td><input name="color" type="text" required="text"></td>
-                </tr>
-                <tr>
-                    <td>Gyártó</td>
-                    <td><input name="manufacturer" type="text" required="text"></td>
-                </tr>
-                <tr>
-                    <td>Elérhetőség</td>
-                    <td><input name="available" type="text" required="text"></td>
-                </tr>
-                <tr>
-                    <td>Évjárat</td>
-                    <td><input name="year" type="text" required="text"></td>
-                </tr>
-                <tr>
-                    <td>Lóerő</td>
-                    <td><input name="horsepower" type="text" required="text"></td>
+                    <td id="autotabla"></td>
                 </tr>
             </table>
-            <tr>
-                <td><input type="submit" value="Autó hozzáadása"></td>
-            </tr>
         </form>
     </div>
 </article>

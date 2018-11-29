@@ -1,15 +1,24 @@
-function changeToIndex () {
-    $( "#src" ).load( "index.html #src");
+function valtas_index()
+{
+    $( "#forras" ).load( "index.html #forras");
 }
 
-function changeToCars () {
-    $( "#src" ).load( "cars.html");
+function valtas_autok()
+{
+    $( "#forras" ).load( "cars.html");
 }
 
-function changeToManufacturers () {
-    $( "#src" ).load( "manufacturers.html");
+function valtas_gyartok()
+{
+    $( "#forras" ).load( "manufacturers.html");
 }
 
-function changeToContacts () {
-    $( "#src" ).load( "contacts.html");
+function valtas_elerhetoseg()
+{
+    $( "#forras" ).load( "contacts.html");
+}
+
+function valtas_galeria()
+{
+    $( "#forras" ).load( "gallery.html");
 }

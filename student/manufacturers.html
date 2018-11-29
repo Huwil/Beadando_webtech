@@ -1,35 +1,47 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <script src="js/addManufacturers.js"></script>
 
-<article>
-    <div id="content">
+<article id="cel">
+    <div>
         <form action="addManufacturers" method="post">
-            <table>
+            <table class="table-orange">
                 <tr>
-                    <td>Név</td>
-                    <td><input name="name" type="text" required="text"></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Név
+                                <input name="name" type="text" required="text"></td>
+                                <tr>
+                                <td>Ország
+                                <select name="country">
+                                    <option value="Hungary">Magyarország</option>
+                                    <option value="England">Anglia</option>
+                                    <option value="France">Franciaország</option>
+                                    <option value="Germany">Németország</option>
+                                    <option value="Spain">Spanyolország</option>
+                                    <option value="Japan">Japán</option>
+                                    <option value="Czech">Csehország</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Russia">Oroszország</option>
+                                    <option value="Slovakia">Szlovákia</option>
+                                    <option value="Italy">Olaszország</option>
+                                    <option value="Romania">Románia</option>
+                                </select></td>
+                                <td>Alapítva
+                                    <input name="founded" type="date" required="date"></td>
+                                </tr>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Gyártó hozzáadása" class="button"></td>
+                                <td><input class="button" value="Gyártók listázása" onclick="loadManufacturers()"></td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Ország</td>
-                    <td><select name="country">
-                        <option value="Hungary">Hungary</option>
-                        <option value="England">England</option>
-                        <option value="France">France</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Spain">Spain</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Czech">Czech</option>
-                        <option value="USA">USA</option>
-                    </select></td>
+                    <td id="gyartotabla"></td>
                 </tr>
-                <tr>
-                    <td>Alapítva</td>
-                    <td><input name="founded" type="date" required="date"></td>
-                 </tr>
             </table>
-            <tr>
-                <td><input type="submit" value="Gyártó hozzáadása"></td>
-            </tr>
         </form>
     </div>
 </article>

@@ -187,9 +187,12 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
+//returns a json containing every manufacturer in the "database"
 app.get('/manufacturers', function (req, res) {
     res.send(manufacturers);
 });
+
+//return the names of the manufacturers. Should be used in forms
 app.get('/manufacturerNames', function (req, res) {
     var manufacturerNames = [];
     for (let m of manufacturers) {
@@ -199,9 +202,13 @@ app.get('/manufacturerNames', function (req, res) {
     }
     res.send(manufacturerNames);
 });
+
+//returns a json containing every car in the "database"
 app.get('/cars', function (req, res) {
     res.send(cars);
 });
+
+//returns the cars that belong to that manufacturer stored in cookies
 app.get('/manufacturer', function (req, res) {
     var ok = false;
     for (var manufacturer of manufacturers) {
@@ -224,6 +231,8 @@ app.get('/manufacturer', function (req, res) {
     }
     res.send(manufacturerCars);
 });
+
+//adds a new car to the "database". If there is a car with that name in the db returns a 409 http error code.
 app.post('/addCar', function (req, res) {
     for (var car of cars) {
         if (car.name === req.body.name) {
@@ -244,6 +253,7 @@ app.post('/addCar', function (req, res) {
     res.send(cars);
 });
 
+//see addCar, but with manufacturer
 app.post('/addManufacturers', function (req, res) {
 
     for (var m of manufacturers) {
@@ -260,6 +270,8 @@ app.post('/addManufacturers', function (req, res) {
     manufacturers.push(manufacturer);
     res.send(manufacturers);
 });
+
+// returns the index.html stored in the student folder which you have to create
 app.get('/', function (req, res) {
     res.sendFile(__dirname + "/student/" + "index.html");
 });
