@@ -34,7 +34,7 @@ function loadManufacturers()
         $.each(data, function (key, value)
         {
             let sor = $('<tr></tr>');
-            let nevCella = $('<td onclick="CookieManufacturers(' + "'" +value.name + "'" +')">' + value.name + '</td>');
+            let nevCella = $('<td onclick="GyartoAutoi(' + "'" +value.name + "'" +')">' + value.name + '</td>');
             let orszagCella = $('<td>' + value.country + '</td>');
             let alapitasCella = $('<td>' + value.founded + '</td>');
             sor.append(nevCella);
@@ -49,7 +49,7 @@ function loadManufacturers()
 }
 
 
-function CookieManufacturers(manufacturer)
+function GyartoAutoi(manufacturer)
 {
     document.cookie = "name=" + manufacturer;
     $.getJSON
