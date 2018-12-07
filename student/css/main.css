@@ -9,7 +9,6 @@ body {
     width: 98%;
 }
 
-/* Style the header */
 header {
     background-color: white;
     padding: 30px;
@@ -19,14 +18,12 @@ header {
     border-radius: 20px 20px 20px 20px;
 }
 
-/* Container for flexboxes */
-section {
+/*section {
     display: -webkit-flex;
     display: flex;
     text-align: center;
-}
+}*/
 
-/* Style the navigation menu */
 nav {
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -37,7 +34,6 @@ nav {
     border: 2px solid black;
 }
 
-/* Style the content */
 article {
     -webkit-flex: 3;
     -ms-flex: 3;
@@ -51,21 +47,12 @@ article {
     margin: 1px;
 }
 
-/* Style the footer */
 footer {
     background-color: darkorange;
     padding: 10px;
     text-align: center;
     color: black;
     border-radius: 20px 20px 20px 20px;
-}
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    section {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
 }
 
 .button {
